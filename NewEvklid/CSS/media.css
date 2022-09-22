@@ -1,0 +1,415 @@
+@media (max-width: 1600px) {
+  .aboutUsImgShadowText{
+    margin-right: 10px;
+  }
+
+  .aboutUsCardsBlock{
+    padding: 65px 40px 65px 20px;
+  }
+  .aboutUsCardsImg{
+    padding-left: 170px;
+    background-size: 150px;
+  }
+
+  .workSlideHeader{
+    margin-right: 100px;
+  }
+
+}
+
+@media (max-width: 1400px) {
+  .footerText{
+    display: none;
+  }
+
+  .aboutUsCardsHead{
+    white-space: normal;
+  }
+
+  .aboutUsCardsPhar{
+    width: 80%;
+  }
+
+  .aboutUsBlock{
+    flex-direction: column;
+  }
+
+  .aboutUsImg{
+    margin-right: 0;
+    max-width: none;
+    height: auto;
+    padding-top: 444px;
+    margin-bottom: 32px;
+  }
+
+  .workSlideHeader{
+    max-width: 440px;
+    margin-right: 50px;
+  }
+
+  .questionHeader{
+    font-size: 20px;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .menu{
+    justify-content: space-between;
+  }
+
+  .burger{
+    display: block;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  .headerMenu{
+    margin: 0;
+  }
+
+  .getCalcContainer{
+    padding: 160px 77px;
+  }
+
+  .section{
+    margin-bottom: 80px;
+  }
+
+  .getCalcBlockHeader {
+    font-size: 60px;
+  }
+
+  .getCalcBlockText{
+    font-size: 20px;
+  }
+
+  .aboutUsBlock{
+    flex-direction: column;
+  }
+
+  .aboutUsImg{
+    margin-right: 0;
+    max-width: none;
+    height: auto;
+    padding-top: 444px;
+    margin-bottom: 32px;
+  }
+
+  .workSlideHeader{
+    max-width: 440px;
+    margin-right: 50px;
+  }
+
+  .questionHeader{
+    font-size: 20px;
+    max-width: 80%;
+  }
+
+  .footer{
+    padding: 40px;
+  }
+
+  .footerContainer{
+    max-width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .footerText{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container{
+    width: 668px;
+  }
+
+  .getCalcContainer{
+    padding: 160px 40px;
+  }
+
+  .getCalcBlockHeader{
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .getCalcBlockText{
+    margin-bottom: 60px;
+  }
+
+  .aboutUsCardsBlock{
+    padding: 35px 48px 35px 40px;
+  }
+
+  .aboutUsCardsImg{
+    padding-left: 130px;
+    background-size: 114px 99px;
+  }
+
+  .aboutUs{
+    margin-bottom: 80px !important;
+  }
+
+  .workSlide{
+    flex-direction: column-reverse;
+  }
+
+  .workPic{
+    width: 668px;
+    height: 284px;
+    max-width: 100%;
+    margin-bottom: 38px;
+  }
+
+  .workSlideHeader{
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .workSlideText{
+    margin-bottom: 25px;
+  }
+
+  .form{
+    margin-bottom: 50px;
+  }
+
+  .footerNav{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /*  aboutUs  */
+
+  .aboutUs {
+    margin-bottom: 60px !important;
+  }
+
+  .aboutUsText{
+    font-size: 14px;
+  }
+
+  .aboutUsImg{
+    padding-top: 200px;
+    margin-bottom: 10px;
+  }
+
+  .aboutUsImgShadow{
+    display: none;
+  }
+
+  .about__img__text-mobile{
+    display: block;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
+
+  .about__img__text-mobile p{
+    margin-bottom: 10px;
+  }
+
+  .about__img__text-mobile button{
+    padding: 11px 40px;
+    font-size: 12px;
+    color: #FF9900;
+    border: 2px solid #FF9900;
+  }
+
+
+  .aboutUsCardsBlock{
+    border: none;
+    padding: 0;
+  }
+
+  .aboutUsCardsImg{
+    padding-left: 0;
+    padding-top: 62px;
+    background-position: left top;
+    background-size: 64px 49px;
+  }
+
+  .aboutUsCardsHead{
+    white-space: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .aboutUsCardsPhar{
+    font-size: 14px;
+    line-height: 28px;
+    width: auto;
+  }
+
+  .workBtn1:not(:last-child){
+    margin-right: 10px;
+  }
+
+
+  /*  Work  */
+
+  .steps{
+    font-size: 14px;
+  }
+
+  .step:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  /*  FOOTER  */
+  .footer{
+    padding: 32px 14px;
+  }
+
+  .footerContainer{
+    align-items: center;
+  }
+
+  .formHeader{
+    font-size: 24px;
+  }
+
+  .form *{
+    max-width: 320px;
+  }
+
+  .field{
+    font-size: 14px;
+  }
+
+  .send{
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #595959;
+  }
+
+  .sendBtn{
+    max-width: 180px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .footerMenu{
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .container{
+    width: 290px;
+  }
+
+  .section{
+    margin-bottom: 60px;
+  }
+
+  /*  HEADER  */
+
+  header{
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .logo{
+    width: 110px;
+  }
+
+  .getCalcContainer{
+    padding: 60px 21px;
+    text-align: center;
+  }
+
+  .getCalcBlockHeader{
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .getCalcBlockText{
+    font-size: 12px;
+    margin-bottom: 32px;
+  }
+
+  .btn-color{
+    font-size: 12px;
+    padding: 14px 25px;
+  }
+
+
+  /*  work  */
+
+  .workHeader{
+    margin-bottom: 16px;
+  }
+
+  .steps{
+    font-size: 14px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .step:not(:last-child){
+    margin-right: 0;
+  }
+
+  .workPic{
+    width: 290px;
+    height: 160px;
+    margin-bottom: 16px;
+  }
+
+  .workSlideHeader{
+    font-size: 18px;
+  }
+
+  .workSlideText{
+    font-size: 14px;
+  }
+
+  .workBtn1{
+    padding: 11px 38px;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .workBtn1:last-child{
+    margin-right: 0;
+  }
+
+  .workBtn2{
+    padding: 11px 29px;
+  }
+
+  /*  Questions  */
+
+  .questionsHeader{
+    line-height: 29px;
+  }
+
+  .questionHeader{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  .questionsLink svg{
+    width: 30px;
+    height: 30px;
+  }
+
+  /*  FOOTER  */
+
+  .form *{
+    max-width: 320px;
+  }
+}
