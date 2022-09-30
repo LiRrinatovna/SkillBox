@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/media.css">
     <link rel="icon" href="IMG/favicon.svg">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="main.js"></script>
     <title>Евклид</title>
   </head>
 
@@ -16,59 +21,90 @@
     <header>
       <div class="container">
         <div class="menu flex">
-          <button class="burger">
-            <svg width="30" height="23" viewbox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="30" height="3" fill="#333333"/>
-              <rect y="10" width="30" height="3" fill="#333333"/>
-              <rect y="20" width="30" height="3" fill="#333333"/>
-            </svg>
+          <button class="btn-reset burger" id="burger">
+            <span class="burgerLine"></span>
+            <span class="burgerLine"></span>
+            <span class="burgerLine"></span>
           </button>
 
           <img src="IMG/Logo_Header.svg" alt="" class="logo">
 
           <div class="headerMenu flex">
-            <nav class="nav">
+            <nav class="nav" id="nav">
               <ul class="headerMenuItems flex">
                 <li class="headerMenuItem">
-                  <a href="" class="headerMenuLink">О нас</a>
+                  <a href="#abUs" class="headerMenuLink">О нас</a>
                 </li>
                 <li class="headerMenuItem">
                   <a href="" class="headerMenuLink">Проекты</a>
                 </li>
                 <li class="headerMenuItem">
-                  <a href="" class="headerMenuLink">Этапы</a>
+                  <a href="#work" class="headerMenuLink">Этапы</a>
                 </li>
                 <li class="headerMenuItem">
                   <a href="" class="headerMenuLink">Отзывы</a>
                 </li>
                 <li class="headerMenuItem">
-                  <a href="" class="headerMenuLink">Контакты</a>
+                  <a href="#contacts" class="headerMenuLink">Контакты</a>
                 </li>
               </ul>
             </nav>
-            <a href="" class="loop">
+          </div>
+          <div class="search" id="contSeach">
+            <input id="searchInput" class="searchInput" type="text" placeholder="Что будем искать?">
+            <button href="" class="loop loopActive" id="search">
               <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333"/>
                 <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#333333" stroke-width="2"/>
               </svg>
-            </a>
+            </button>
+            <button id="searchClose" href="" class="loopClose">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="#CACACA"/>
+                <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="#CACACA"/>
+                <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2"/>
+              </svg>
+            </button>
           </div>
+
         </div>
       </div>
     </header>
 
-    <main class="main">
-      <section class="getCalc section">
-        <div class="container getCalcContainer">
-          <div class="getCalcBlock">
-            <h1 class="getCalcBlockHeader">Проектные решения любой сложности</h1>
-            <p class="getCalcBlockText">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
-            <button class="btn btn-color heroBtn">Заказать расчёт</button>
-          </div>
-        </div>
-      </section>
 
-      <section class="aboutUs section">
+    <main class="main">
+      <div class="container">
+        <section class="slider main__slider">
+          <div class="slider__info">
+            <h1 class="slider__title title title_large">
+              Проектные решения любой сложности
+            </h1>
+            <p class="slider__text text text_large text_white">
+              Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом
+              проектантов
+            </p>
+            <button class="slider__button btn btn_size_large">
+              Заказать расчёт
+            </button>
+          </div>
+            <!-- Slider main container -->
+          <div class="swiper slider__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper slider__wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide slider__slide slider__slide_img1"></div>
+              <div class="swiper-slide slider__slide slider__slide_img2"></div>
+              <div class="swiper-slide slider__slide slider__slide_img3"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </section>
+      </div>
+
+
+      <section id="abUs" class="aboutUs section">
         <div class="container">
           <h2 class="header aboutUsHeader">О нас</h2>
           <p class="aboutUsText">
@@ -122,90 +158,219 @@
         </div>
       </section>
 
-      <section class="work section">
+      <section id="work" class="work section">
         <div class="container">
           <h2 class="header workHeader">Как мы работаем</h2>
           <ul class="steps flex">
-            <li class="step"><a href="#" class="tabs__link">1 шаг</a></li>
-            <li class="step"><a href="#" class="tabs__link">2 шаг</a></li>
-            <li class="step"><a href="#" class="tabs__link">3 шаг</a></li>
-            <li class="step"><a href="#" class="tabs__link">4 шаг</a></li>
+            <li class="step"><a href="" class="tabs__link tabsActive" data-path="one">1 шаг</a></li>
+            <li class="step"><a href="" class="tabs__link" data-path="two">2 шаг</a></li>
+            <li class="step"><a href="" class="tabs__link" data-path="three">3 шаг</a></li>
+            <li class="step"><a href="" class="tabs__link" data-path="four">4 шаг</a></li>
           </ul>
-          <div class="workSlide flex">
-            <div class="workSlideBlock">
-              <h3 class="workSlideHeader">
-                Проводим консультацию
-              </h3>
-              <p class="workSlideText">
-                Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
-              </p>
-              <div class="workBtns flex">
-                <button class="btn btn-color workBtn1">Подробнее</button>
-                <button class="btn btn-trans workBtn2">Договор</button>
+
+
+          <div class="tabsItem tabsItem_active" data-target="one">
+            <div class="workSlide flex">
+              <div class="workSlideBlock">
+                <h3 class="workSlideHeader">
+                  Проводим консультацию
+                </h3>
+                <p class="workSlideText">
+                  Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
+                </p>
+                <div class="workBtns flex">
+                  <button class="btn btn-color workBtn1">Подробнее</button>
+                  <button class="btn btn-trans workBtn2">Договор</button>
+                </div>
+              </div>
+              <div class="workPic">
+                <img src="img/work_1920.jpg" alt="">
               </div>
             </div>
-            <div class="workPic">
+          </div>
 
+          <div class="tabsItem" data-target="two">
+            <div class="workSlide flex">
+              <div class="workSlideBlock">
+                <h3 class="workSlideHeader">
+                  Составляем смету
+                </h3>
+                <p class="workSlideText">
+                  Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
+                </p>
+                <div class="workBtns flex">
+                  <button class="btn btn-color workBtn1">Подробнее</button>
+                  <button class="btn btn-trans workBtn2">Договор</button>
+                </div>
+              </div>
+              <div class="workPic">
+                <img src="IMG/2_workPiс.jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tabsItem" data-target="three">
+            <div class="workSlide flex">
+              <div class="workSlideBlock">
+                <h3 class="workSlideHeader">
+                  Привлекаем подрядчиков
+                </h3>
+                <p class="workSlideText">
+                  Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
+                </p>
+                <div class="workBtns flex">
+                  <button class="btn btn-color workBtn1">Подробнее</button>
+                  <button class="btn btn-trans workBtn2">Договор</button>
+                </div>
+              </div>
+              <div class="workPic">
+                <img src="IMG/3_workPiс.jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tabsItem" data-target="four">
+            <div class="workSlide flex">
+              <div class="workSlideBlock">
+                <h3 class="workSlideHeader">
+                  Инспектируем все этапы работ
+                </h3>
+                <p class="workSlideText">
+                  Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит
+о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+                </p>
+                <div class="workBtns flex">
+                  <button class="btn btn-color workBtn1">Подробнее</button>
+                  <button class="btn btn-trans workBtn2">Договор</button>
+                </div>
+              </div>
+              <div class="workPic">
+                <img src="IMG/4_workPiс.jpg" alt="">
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="questions section">
-        <div class="container">
-          <h2 class="header questionsHeader">Часто задаваемые вопросы</h2>
-          <ul class="questions">
-            <li class="questions__li">
-              <a href="#" class="questionsLink">
+      <div class="container">
+        <h2 class="header questionsHeader">Часто задаваемые вопросы</h2>
+        <div class="accordion questions section" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button questionsLink" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <h4 class="questionHeader">Из чего формируется конечная стоимость проекта?</h4>
                 <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
                 </svg>
-              </a>
-            </li>
-            <li class="questions__li">
-              <a href="#" class="questionsLink">
-                <h4 class="questionHeader">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</h4>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас 
+                  к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы.
+                  Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов.</p>
+                <p>Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                  а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button questionsLink" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <h4 class="questionHeader">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</h4>
                 <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
                 </svg>
-              </a>
-            </li>
-            <li class="questions__li">
-              <a href="#" class="questionsLink">
-                <h4 class="questionHeader">Я выбираю между разными компаниями. В чём ваше отличие?</h4>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас 
+                  к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы.
+                  Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов.</p>
+                <p>Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                  а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button questionsLink" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                <h4 class="questionHeader">Я выбираю между разными компаниями. В чём ваше отличие?</h4>
                 <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
                 </svg>
-              </a>
-            </li>
-            <li class="questions__li">
-              <a href="#" class="questionsLink">
-                <h4 class="questions__header">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией? </h4>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас 
+                  к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы.
+                  Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов.</p>
+                <p>Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                  а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button questionsLink" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                <h4 class="questionHeader">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?</h4>
                 <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
                 </svg>
-              </a>
-            </li>
-            <li class="questions__li">
-              <a href="#" class="questionsLink">
-                <h4 class="questionHeader">Могу ли я вернуть деньги на каком-либо из этапов работ? </h4>
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас 
+                  к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы.
+                  Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов.</p>
+                <p>Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                  а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button questionsLink" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                <h4 class="questionHeader">Могу ли я вернуть деньги на каком-либо из этапов работ?</h4>
                 <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
                 </svg>
-              </a>
-            </li>
-          </ul>
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас 
+                  к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы.
+                  Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов.</p>
+                <p>Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения,
+                  а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                  а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
 
-    <footer class="footer">
+    <footer id="contacts" class="footer">
       <div class="container footerContainer flex">
         <div class="footerMenu">
           <img src="IMG/footer_Label.svg" alt="" class="footerLogo">

@@ -215,6 +215,40 @@ header{
 .loop{
   width: 24px;
   height: 24px;
+  border: none;
+  background-color: white;
+}
+
+.loopClose{
+  display: none;
+}
+
+.searchInput{
+  display: none;
+}
+
+.search{
+  border: none;
+  box-shadow: none;
+}
+
+
+.loopCloseActive{
+  border: none;
+  background-color: white;
+}
+
+.searchActive{
+  border: 1px solid #CACACA;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+}
+
+.searchInputActive{
+  border: none;
+  border-bottom: 1px solid #cacaca;
+  margin-left: 5px;
 }
 
 .loop:focus{
@@ -232,13 +266,189 @@ header{
 
 /* getCalc */
 
-.getCalcContainer{
-  background: url(../IMG/getCalc_BackGround.jpg) center center no-repeat;
+.btn_size_large {
+  padding: 25px 37px;
+  font-weight: bold;
+  font-size: 23.4581px;
+  line-height: 29px;
+}
+
+.btn_size_large:hover {
+  opacity: 70%;
+}
+
+.btn_size_large:focus {
+  outline: none;
+  opacity: 70%;
+}
+
+.btn_size_large:active {
+  opacity: 100%;
+}
+
+
+.title {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+.title_normal {
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 59px;
+}
+
+.title_small {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.title_middle {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.text {
+  margin: 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: #333333;
+}
+
+
+.main__slider {
+  margin: 0 0 100px 0;
+}
+
+.slider {
+  position: relative;
+  padding: 102px 0 100px 82px;
+}
+
+.slider__slide {
+}
+
+.slider__wrapper {
+  min-height: inherit;
+}
+
+.slider__swiper {
+  position: absolute;
+  min-height: inherit;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.slider__slide_img1 {
+  background-image: url("../IMG/getCalc_BackGround.jpg");
+  min-height: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+}
+
+.slider__slide_img2 {
+  background-image: url("../IMG/2_getCalc.jpg");
+  min-height: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__slide_img3 {
+  background-image: url("../IMG/3_getCalc.jpg");
+  min-height: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.slider__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 895px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider__title {
+  margin: 0 0 26px 0;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 85px;
+  color: #FFFFFF;
+/*   pointer-events: none; */
+}
+
+.slider__text {
+  margin: 0 0 90px 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+/*   pointer-events: none; */
+}
+
+.slider__button{
+  pointer-events: auto;
+}
+
+.btn {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  background-color: #FF9900;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition-property: background-color, border-color, opacity, color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+
+.btn_size_large {
+  padding: 25px 37px;
+  font-weight: bold;
+  font-size: 23.4581px;
+  line-height: 29px;
+}
+
+.slider__control {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 30px;
+}
+
+.btn_round {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+.getCalcContainer{
   padding: 100px 80px;
+  z-index: 100;
 }
 
 .getCalcBlock{
+  position: relative;
   max-width: 840px;
   color: white;
 }
@@ -429,11 +639,23 @@ header{
   padding: 20px 38px;
 }
 
-.workPic{
-  background: url(../img/work_1920.jpg) center center no-repeat;
-  background-size: cover;
-  width: 870px;
-  max-width: 50%;
+.workPic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tabsNavBtn_active{
+  color: #FF9900;
+  border-bottom: 2px solid #FF9900;
+}
+
+.tabsItem{
+  display: none;
+}
+
+.tabsItem_active{
+  display: block;
 }
 
 /* questions */
@@ -475,6 +697,31 @@ header{
   font-size: 24px;
 }
 
+.accordion-button::after {
+display: none;
+}
+
+.accordion-button svg::after {
+  transform: translate(90deg);
+}
+
+.accordion-button:not(.collapsed)::after {
+  display: none;
+  background-image: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: #ffffff;
+  box-shadow:none;
+}
+
+.accordion-button:focus {
+  border: none;
+  border-color: #fff;
+  box-shadow: none;
+  border-bottom: 1px solid #CACACA;
+}
  /* footer */
 
 footer{
